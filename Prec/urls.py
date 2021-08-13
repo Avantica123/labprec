@@ -23,8 +23,11 @@ from home.forms import Passreset,Passconfirm
 admin.site.site_header = "TINKERES LAB ADMIN"
 admin.site.site_title = "TINKERES LAB PORTAL"
 admin.site.index_title = "Welcome to prec tinkeres lab Portal"
+from django.views.static import serve
+from django.urls import re_path
 
 urlpatterns = [
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT}),
     path('admin/', admin.site.urls),
     path("",views.index,name="home"),
     path("signup/",views.signup, name="signup"),
