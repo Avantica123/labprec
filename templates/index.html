@@ -1,0 +1,205 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>Tinkeres's Lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+  
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+     
+        <div class="container-fluid">
+          <a class="navbar-brand text-info" href="/"><h5>  TINKERERS' LAB</h5> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              {% if request.user.is_authenticated %}
+                
+              <li class="nav-item  ">
+                <a class="nav-link active text-info " aria-current="page" href="/"> <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/about-us/"><i class="fas fa-address-card"></i> About-Us</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/events/"><i class="far fa-calendar-check"></i> Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/forum/"><i class="fas fa-align-left"></i>Forum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/profile/"><i class="far fa-id-badge"></i>Profile</a>
+              </li>
+              {% else %}
+              <li class="nav-item  ">
+                <a class="nav-link active text-info " aria-current="page" href="/"> <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/about-us/"><i class="fas fa-address-card"></i> About-Us</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/events/"><i class="far fa-calendar-check"></i> Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/forum/"><i class="fas fa-align-left"></i>Forum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/signup/"><i class="fas fa-user-plus"></i>Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="/loginuser/"><i class="fas fa-sign-in-alt"></i>Login</a>
+              </li>
+              
+              {% endif %}
+    
+    
+            </ul>
+    
+         
+    
+          </div>
+        </div>
+      </nav>
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Sucess!</strong> {{message}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+      {% endfor %}
+          
+      {% endif %}
+
+
+
+<div style="background-color: rgb(55, 65, 65);" class="container-fluid">
+  
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 style="color: aliceblue;" class="fw-light "><b>Welcome Tinkeres's Lab</b></h1>
+            <img src="{% static 'home/img/2.png' %}" class="img-fluid" width="60px" height="60px" alt="My image">
+            
+            <h5 style="color: aliceblue;"><b>Pravara Rural Education Society</b></h5>
+            <p style="color: aliceblue;" ><b>Share Your Ideas.</b></p>
+            <p>
+              <a href="/forum/" class="btn btn-warning text-dark my-2">Go To Forum</a>
+            </p>
+            <hr style="height: 5px; color: aliceblue;">
+            <h2> <a href="https://www.instagram.com/"><i style="color:#fb3958;"
+              class="fab fa-instagram"></i></a> &nbsp; <a href="https://www.facebook.com/"><i style="color: rgb(23, 23, 177);"
+              class="fab fa-facebook"></i></a> &nbsp; <a href="https://www.linkedin.com/"><i style="color: rgb(0, 134, 151);"
+              class="fab fa-linkedin"></i></a> &nbsp; <a href="https://twitter.com/"><i style="color: aqua;" class="fab fa-twitter"></i></a></h2>
+              
+          </div>
+        </div>
+      </section>
+</div>
+
+  <section  class="page-section mt-4 bg-dark">
+    <div class="container">
+        <div class="row">
+            <h3 style="color: aliceblue;" >Who We Are!!</h3>
+            <div style="border-left: 3px solid rgb(241, 21, 223);" class="col-12 col-sm-12 col-md-12 ">
+
+                <p  style="color: aliceblue;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ullam alias explicabo soluta non
+                    odio
+                    sunt obcaecati accusantium temporibus recusandae. Aliquam incidunt libero
+                    facere magni eum? Vitae tempora cumque adipisci commodi a dolore omnis
+                    consequuntur temporibus! Qui deleniti quasi aliquid soluta, non iure quaerat
+                    enim quis. Reiciendis minima optio ad.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <h3 style="color: aliceblue;">Our Faculty Members</h3>
+            <div style="border-left: 3px solid rgb(245, 17, 207);" class="col-12 col-sm-6 col-md-6">
+                <h5 style="color: aliceblue;" ><b>staff co-ordinators</b></h5>
+                <p style="color: aliceblue;" >1.Mr. Bhambare Rajesh </p>
+                <p style="color: aliceblue;" >2.Mr.Kale Suhas</p>
+            </div>
+            <div style="border-left: 3px solid rgb(247, 84, 225);" class="col-12 col-sm-6 col-md-6">
+                <h5 style="color: aliceblue;" ><b>Students co-ordinators</b></h5>
+                <p style="color: aliceblue;" >1.Mr.Ghogare Aniket </p>
+                <p style="color: aliceblue;" >2.Mr.Shelke Nikhil</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="container-fluid">
+  <hr style="height: 5px; color: #ebb3bc;">
+</div>
+
+<div class="container text-white mt-4">
+  <div class="row">
+    <div class="col-12 col-sm-6 ">
+        <h5>Tinkerers' Lab</h5>
+        <p>Location: Pravara Rural Engineering College Loni 413736</p>
+        <p><span><b><i class="fas fa-phone"></i>&nbsp; Phone:</b></span>(02422) 273204</p>
+        <p><span><b><i class="fas fa-envelope-open"></i> &nbsp; Email:</b></span>principal@pravaraengg.org.in</p>
+
+    </div>
+    <div class="col-12 col-sm-6">
+      <h5>Touch with Us </h5>
+      <h2> <a href="https://www.instagram.com/"><i style="color:#fb3958;"
+        class="fab fa-instagram"></i></a> &nbsp; <a href="https://www.facebook.com/"><i style="color: rgb(23, 23, 177);"
+        class="fab fa-facebook"></i></a> &nbsp; <a href="https://www.linkedin.com/"><i style="color: rgb(0, 134, 151);"
+        class="fab fa-linkedin"></i></a> &nbsp; <a href="https://twitter.com/"><i style="color: aqua;" class="fab fa-twitter"></i></a></h2>
+        
+    </div>
+  </div>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/4a20769935.js" crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
